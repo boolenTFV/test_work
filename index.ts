@@ -81,7 +81,6 @@ function getTemplateFunction(str: string): FormatFunction {
 function isInputType<T extends Input>(input: any): input is Input {
   for(let key in input ) {
     if (typeof key != 'string' || !(typeof input[key] == 'string' || isInputType(input[key]))) return false;
-    console.log(key, input[key], typeof input[key] == 'string');
   }
   return true;
 }
